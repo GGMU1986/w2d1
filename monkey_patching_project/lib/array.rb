@@ -43,6 +43,29 @@ class Array
   end
 
   def my_index(val)
+    (0...self.length - 1).each do |i|
+      return i if self[i] == val
+    end
 
+    nil
+  end
+
+  def my_uniq
+    h = {}
+
+    self.each { |ele| h[ele] = true }
+
+    h.keys
+  end
+
+  def my_transpose
+    h = Hash.new { |h, k| h[k] = [] }
+    
+    self.each do |sub|
+      (0...sub.length).each do |i|
+        h[i] << sub[i]
+      end
+    end
+    h.values
   end
 end
