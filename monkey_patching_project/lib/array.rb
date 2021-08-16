@@ -33,4 +33,16 @@ class Array
 
     h
   end
+
+  def my_count(val)
+    count = 0
+
+    self.each { |ele| count += 1 if ele == val }
+
+    count
+  end
+
+  def my_index(val)
+
+  end
 end
