@@ -14,8 +14,8 @@ class Dog
         @age > 3 ? @bark.upcase : @bark.downcase
     end
 
-    def favorite_foods?(str)
-        @favorite_foods.include?(str.downcase)
+    def favorite_food?(str)
+        @favorite_foods.include?(str.capitalize)
     end
 
 end
